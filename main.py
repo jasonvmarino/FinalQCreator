@@ -8,9 +8,8 @@ for item in file:
         if item[-11:] != 'answers.txt':
             files.append(item[:-4])
 for item in files:
-    print(item)
     filereader.FileReader(item)
-    file_list = [item + '.txt', item + ' answers.txt' + '.xlsx']
+    file_list = [item + '.txt', item + ' answers.txt', item + '.xlsx']
     inipath = os.getcwd() + chr(92)
     path = os.getcwd() + chr(92) + item + chr(92)
     access_rights = 0o755
@@ -19,4 +18,4 @@ for item in files:
     except:
         pass
     for items in file_list:
-        os.rename(inipath + item, path + item)
+        os.rename(inipath + items, path + items)

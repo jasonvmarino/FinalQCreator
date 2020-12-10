@@ -108,6 +108,8 @@ class FileReader():
             ws[x_let + str(y)] = item
         wb.save(self.excelName)
         wb.close()
+        wb = None
+        ws = None
 
     def moveFile(self): #Used to move the file already processed by wNames
         import os
@@ -120,4 +122,4 @@ class FileReader():
         except:
             pass
         for item in file_list:
-            os.rename(inipath + self.fname,path + item)
+            os.rename(inipath + self.fname,item)
