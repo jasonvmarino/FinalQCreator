@@ -23,7 +23,10 @@ class FileReader():
     def break_points(self): # sets the ranges of lines for each type of question
         self.mc = self.raw_lines.index('Multiple Choice:')
         self.tf = self.raw_lines.index('True/False:')
-        self.fill = self.raw_lines.index('Fill in the Blank:')
+        try:
+            self.fill = self.raw_lines.index('Fill in the blank:')
+        except:
+            self.fill = self.raw_lines.index('Fill in the Blank:')
 
     def mcParser(self):
         temp_list = []
