@@ -93,8 +93,8 @@ class FileReader():
             x_let_true = get_column_letter(x + 1)
             x_let_false = get_column_letter(x + 2)
             ws[x_let + str(y)] = item
-            ws[x_let_true + str(y)] = 'T'
-            ws[x_let_false + str(y)] = 'F'
+            ws[x_let_true + str(y)] = 'True'
+            ws[x_let_false + str(y)] = 'False'
         for item in self.fill_list:
             x = 1
             y += 1
